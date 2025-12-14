@@ -1,0 +1,16 @@
+BasicInfo:
+  Title                   : "Your App"
+  CompanyCode             : "00"
+  ProductCode             : "CTR-H-ABCD"
+  ContentType             : Application
+  Logo                    : Nintendo
+
+TitleInfo:
+  UniqueId                : 0xABCD
+
+Option:
+  EnableCompress          : true
+  FreeProductCode         : true
+
+AccessControlInfo:
+  DisableDebug            : false

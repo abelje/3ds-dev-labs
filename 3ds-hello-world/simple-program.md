@@ -114,3 +114,52 @@ Paste this in the file that opens:
 4. Add the overall gamefolder to Azahar and scan for the subfolder containing the file after running ```make```.
 
 5. It gives me this result: ![emulator](hello-world-emulator.png)
+
+6. Create a CIA File and QR Code:
+
+    To do this, I need to create a cia file, and doing some research, there is a tool called make rom to do that. I just need to install it. 
+
+    - in terminal run, this will download the zip for makerom:
+
+        ```
+        wget -O makerom.zip "https://github.com/3DSGuy/Project_CTR/releases/download/makerom-v0.18.2/makerom-v0.18.2-ubuntu_x86_64.zip"
+        ```
+
+        ```
+        unzip makerom.zip
+        ```
+
+        Move makerom to PATH
+        ```
+        sudo mv makerom /usr/local/bin/
+        ```
+        Need to install cxitool as well so move download from [this](https://www.gamebrew.org/wiki/CxiTool_3DS) to my debian install.
+        ```
+        7z x cxitool3ds.7z
+        ```
+
+        ```
+        unzip 3dstools-cxi-stuff.zip
+        ```
+        
+        ```
+        ./autogen.sh
+        ./configure
+        make
+        ```
+
+        ```
+        sudo mv cxitool /usr/local/bin/
+        ```
+
+        Then I make in my project folder:
+
+        ```
+        cxitool 3ds-hello-world.3dsx 3ds-hello-world.cxi
+        ```
+
+        I moved my files to the app folder, then I create the cia using makerom:
+
+        ```
+        makerom -v -f cia -o 3ds-hello-world.cia -target t -i 3ds-hello-world.cxi:0:0 -ignoresign -icon 3ds-hello-world.smdh
+        ```
