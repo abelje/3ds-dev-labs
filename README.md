@@ -6,3 +6,11 @@ My main goals for this project is to:
 - Get a feel for 3ds development and what is possible
 - Create simple programs to explore what I can do with the 3ds hardware
 - Create a game of some sort
+
+## Resources
+Here is some of the resources that I have found so far:
+
+- [https://3ds.hacks.guide/](https://3ds.hacks.guide/)
+- [3dsdevforum](https://devkitpro.org/viewforum.php?f=39)
+- [libctru](https://libctru.devkitpro.org/)
+- [3ds-homebrew-development](https://github.com/jdriselvato/3DS-Homebrew-development)
