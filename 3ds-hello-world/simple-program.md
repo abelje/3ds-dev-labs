@@ -164,3 +164,12 @@ Paste this in the file that opens:
         ```
         makerom -v -f cia -o 3ds-hello-world.cia -target t -i 3ds-hello-world.cxi:0:0 -ignoresign -icon 3ds-hello-world.smdh
         ```
+        If you do not have a .smdh file, you can create one with this (Make sure png are 48by48):
+        ```
+        smdhtool -c -o myapp.smdh --icon hello_world_label.png --banner banner.png --title "Hello World" --maker "AB"
+        ```
+7. To Create the QR code, push your cia to github, go to the cia file on github, right click on 'view raw' and copy the link. Paste this link into a qr code generator, such as: [qrcode-monkey](https://www.qrcode-monkey.com/).
+8. To install on 3ds, go to FBI, select 'Remote Install', then 'Scan QR Code'. Use your 3ds camera to scan the QR code you created. It should install and add an app to your homescreen.
+
+Here is my QR Code:
+
