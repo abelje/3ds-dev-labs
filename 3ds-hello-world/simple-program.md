@@ -168,8 +168,27 @@ Paste this in the file that opens:
         ```
         smdhtool -c -o myapp.smdh --icon hello_world_label.png --banner banner.png --title "Hello World" --maker "AB"
         ```
-7. To Create the QR code, push your cia to github, go to the cia file on github, right click on 'view raw' and copy the link. Paste this link into a qr code generator, such as: [qrcode-monkey](https://www.qrcode-monkey.com/).
-8. To install on 3ds, go to FBI, select 'Remote Install', then 'Scan QR Code'. Use your 3ds camera to scan the QR code you created. It should install and add an app to your homescreen.
+7. If you want custom labels to work, I was able to get it to work by making a new 3dsx file with ```3dsxtool```:
+
+   ```
+   3dsxtool myapp.3dsx --smdh myapp.smdh myapp.elf
+   ```
+   
+   Then make the cxi
+
+   ```
+   cxitool myapp.3dsx myapp.cxi
+   ```
+   
+   Then make the cia:
+
+   ```
+   makerom -v -f cia -o myapp.cia -target t -i myapp.cxi:0:0 -ignoresign -icon myapp.smdh
+   ```
+
+8. To Create the QR code, push your cia to github, go to the cia file on github, right click on 'view raw' and copy the link. Paste this link into a qr code generator, such as: [qrcode-monkey](https://www.qrcode-monkey.com/).
+9. To install on 3ds, go to FBI, select 'Remote Install', then 'Scan QR Code'. Use your 3ds camera to scan the QR code you created. It should install and add an app to your homescreen.
 
 Here is my QR Code:
 
+![qr-code](qr-code.png)

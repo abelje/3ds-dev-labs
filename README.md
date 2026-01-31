@@ -7,6 +7,10 @@ My main goals for this project is to:
 - Create simple programs to explore what I can do with the 3ds hardware
 - Create a game of some sort
 
+## Projects
+1. Hello World!
+![hello-world](3ds-hello-world/qr-code.png)
+
 ## Resources
 Here is some of the resources that I have found so far:
 
