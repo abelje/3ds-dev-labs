@@ -171,7 +171,7 @@ Paste this in the file that opens:
 7. If you want custom labels to work, I was able to get it to work by making a new 3dsx file with ```3dsxtool```:
 
    ```
-   3dsxtool myapp.3dsx --smdh myapp.smdh myapp.elf
+   3dsxtool myapp.elf myapp.3dsx --smdh=myapp.smdh
    ```
    
    Then make the cxi
