@@ -132,6 +132,7 @@ Paste this in the file that opens:
         Move makerom to PATH
         ```
         sudo mv makerom /usr/local/bin/
+        sudo chmod +x /usr/local/bin/makerom
         ```
         Need to install cxitool as well so move download from [this](https://www.gamebrew.org/wiki/CxiTool_3DS) to my debian install.
         ```
@@ -139,7 +140,7 @@ Paste this in the file that opens:
         ```
 
         ```
-        unzip 3dstools-cxi-stuff.zip
+        unzip 3dstools-cxi-stuff-src.zip
         ```
         
         ```
