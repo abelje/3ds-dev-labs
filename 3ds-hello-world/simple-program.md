@@ -186,8 +186,23 @@ Paste this in the file that opens:
    makerom -v -f cia -o myapp.cia -target t -i myapp.cxi:0:0 -ignoresign -icon myapp.smdh
    ```
 
-8. To Create the QR code, push your cia to github, go to the cia file on github, right click on 'view raw' and copy the link. Paste this link into a qr code generator, such as: [qrcode-monkey](https://www.qrcode-monkey.com/).
-9. To install on 3ds, go to FBI, select 'Remote Install', then 'Scan QR Code'. Use your 3ds camera to scan the QR code you created. It should install and add an app to your homescreen.
+8. Optional use of banner tool from this website: [bannertool](https://github.com/carstene1ns/3ds-bannertool)
+
+   I used this command, I had to find a silent .wav file:
+   ```
+   ./bannertool makebanner \
+   -uei banner.png \
+   -a Silent.wav \
+   -o banner.bin
+   ```
+   then rebuilt using the banner in makerom
+
+   ```
+   makerom -v -f cia -o myapp.cia -target t -i myapp.cxi:0:0 -ignoresign -icon myapp.smdh -banner banner.bin 
+   ```
+
+9. To Create the QR code, push your cia to github, go to the cia file on github, right click on 'view raw' and copy the link. Paste this link into a qr code generator, such as: [qrcode-monkey](https://www.qrcode-monkey.com/).
+10. To install on 3ds, go to FBI, select 'Remote Install', then 'Scan QR Code'. Use your 3ds camera to scan the QR code you created. It should install and add an app to your homescreen.
 
 Here is my QR Code:
 
